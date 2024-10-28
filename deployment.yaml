@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue-deploy
+  name: green-deploy
   labels:
     app: index
-    env: blue
-    version: v1.0.0
+    env: green
+    version: v2.0.0
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: index
-      env: blue
+      env: green
   template:
     metadata:
       labels:
         app: index
-        env: blue
-        version: v1.0.0
+        env: green
+        version: v2.0.0
     spec:
       containers:
       - name: indexapp
