@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-deploy
+  labels:
+    app: index
+    env: blue
+    version: v1.0.0
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: index
+      env: blue
+  template:
+    metadata:
+      labels:
+        app: index
+        env: blue
+        version: v1.0.0
+    spec:
+      containers:
+      - name: indexapp
+        image: anvesh35/echo-pod-name:v1.0.0
+        ports:
+        - containerPort: 80
