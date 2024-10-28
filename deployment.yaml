@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: indexapp
-        image: anvesh35/echo-pod-name:v1.0.0
+        image: 
         ports:
         - containerPort: 80
