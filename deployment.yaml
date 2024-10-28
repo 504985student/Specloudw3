@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: indexapp
-        image: 
+        image: us-central1-docker.pkg.dev/smart-seer-434509-i6/pccopdrwk3/indexapp:blue
         ports:
         - containerPort: 80
